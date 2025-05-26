@@ -1,0 +1,27 @@
+.header,.social{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    padding-left: 110px;
+    padding-right: 110px;
+    padding-top:20px;
+    gap:20px;
+    width: 100%;
+    @include breakpoint(tablet){
+        padding: 30px 30px 0 30px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__logo{
+        display: inline-block;
+        width: 129px;
+        @include breakpoint(tablet){
+            width: 172px;
+        }
+
+        img{
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,197 @@
+@import './abstracts/abstracts';
+@import './vendors/vendors';
+@import './base/base';
+@import './components/components';
+@import './layout/layout';
+@import './pages/pages';
+@import './themes/themes';
+@import 'settings';
+
+.experience{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:24px;
+    padding:40px 14px 40px 16px;
+    margin-top: 92px;
+    @include breakpoint(tablet){
+        padding:52px 30px 0 30px;
+        margin-top:72px;
+        display: grid;
+    }
+    @include breakpoint(desktopxl){
+        margin-top: 80px;
+
+    }
+        
+    &::before{
+        content: '';
+        background-color:$color-headers ;
+        width: calc(100% - 30px);
+        height: 1px;
+        position:absolute;
+        top:0;
+        @include breakpoint(tablet){
+            width: calc(100% - 60px);
+        }
+    }
+    &::after{
+        content: '';
+        background-color:$color-headers ;
+        width: calc(100% - 30px);
+        height: 1px;
+        position:absolute;
+        bottom:0;
+        @include breakpoint(tablet){
+            display: none;
+        }
+    }
+    &__subtitle{
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: -1px;
+        text-align: center;
+        @include breakpoint(tablet){
+            @include heading(L);
+            text-align: left;
+        }
+    }
+
+    &__text{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: 0px;
+        text-align: center;
+        @include breakpoint(tablet){
+            @include body;
+            text-align: left;
+        }
+
+    }
+}
+
+.project{
+    margin-top: 80px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom:92px ;
+    @include breakpoint(tablet){
+        margin-top: 100px;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-bottom: 120px;
+    }
+    @include breakpoint(desktopxl){
+        margin-top: 140px;
+    }
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+
+   
+    &__button{
+        align-self: flex-start;
+        display: inline-block;
+        @include breakpoint(tablet){
+            align-self: center;
+            
+        }
+    }
+
+    &__title{
+        font-family: Space Grotesk;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 40px;
+        letter-spacing: -1.14px;
+        @include breakpoint(tablet){
+            font-size: 72px;
+            line-height: 72px;
+            letter-spacing: -2.05px;
+
+        }
+    }
+    
+    &__myproject{
+        margin-bottom:52px;
+        @include breakpoint(desktopxl){
+            position:relative;
+        }
+
+    }
+    &__myproject:hover &__buttons{
+        @include breakpoint(desktopxl){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position:absolute;
+            top: 0;
+            left:0;
+            width: 100%;
+            height: 82%;
+            background-color: rgba(0, 0, 0, 0.75);
+            gap:68px;
+            transition: all 0.5s ease-in-out;
+        }
+    }
+
+    &__img{
+        width: 100% ;
+        @include breakpoint(tablet){
+            height: 82%;
+        }
+    }
+
+    &__subtitle{
+        @include heading(M);
+        margin-bottom: 7px;
+        @include breakpoint(desktopxl){
+            margin-top: 20px;
+            margin-bottom: 7px;
+            @include heading(M);
+        }
+
+    }
+
+    &__text{
+        display: flex;
+        gap:18px;
+        margin-bottom: 20px;
+        p{
+            @include body;
+        }
+    }
+    &__buttons{
+        display: flex;
+        gap:30px;
+        @include breakpoint(desktopxl){
+            
+            transition-duration: 0.2s;
+            display: none;
+ 
+        }
+    }
+}
+
+.page{
+    position: relative;
+    background-image: url('../../src/img/bobina.svg'), url('../../src/img/bobina-derecha.svg'),url('../../src/img/oval.svg');
+    background-repeat: no-repeat, no-repeat,no-repeat;
+    background-size:530px 129px, 530px 129px,129px 129px;
+    background-position: -300px 115px,17px 1343px,311px 220px;
+    @include breakpoint(tablet){
+        background-position: -220px 101px, 404px 949px, 703px 468px
+    }
+    @include breakpoint(desktopxl){
+        padding-left: 135px;
+        padding-right: 135px;
+        background-position: -38px 120px, 958px 827px, 923px 425px;
+    }
+    
+}

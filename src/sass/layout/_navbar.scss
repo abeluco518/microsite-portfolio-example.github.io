@@ -1,0 +1,19 @@
+.nav__social{
+    width: 100%;
+    ul{
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        @include breakpoint(tablet){
+            justify-content: flex-end;
+            gap:32px
+        };
+        img{
+            width: 19px;
+            @include breakpoint(tablet){
+                width: 24px;
+            }
+
+        }
+    }
+}
