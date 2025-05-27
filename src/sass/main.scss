@@ -186,7 +186,7 @@
     background-size:530px 129px, 530px 129px,129px 129px;
     background-position: -300px 115px,17px 1343px,311px 220px;
     @include breakpoint(tablet){
-        background-position: -220px 101px, 404px 949px, 703px 468px
+        background-position: -220px 101px, 103% 949px, 78% 468px;
     }
     @include breakpoint(desktopxl){
         padding-left: 135px;
